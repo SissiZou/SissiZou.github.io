@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="zh-CN" style="color-scheme: dark;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sissi - UX/UI Designer</title>
+    <link rel="stylesheet" href="./css/style.min.css">
+    <link rel="shortcut icon" href="./assets/public/favicon.svg"/>
+</head>
+<body>
+    <canvas class="fireworks"></canvas>
+    <div class="head">
+        <div class="main">
+            <a href="./index.html" class="logo"><img src="./assets/public/logo_text2.svg"></a>
+            <div class="menu">
+                <li class="magical btn" onclick="window.location.href='./index.html'">Home</li>
+                <li class="magical btn" onclick="window.location.href='./work.html'">Work</li>
+                <li class="magical btn" onclick="window.location.href='./blog.html'">Blog</li>
+                <li class="magical btn nav" onclick="window.location.href='./about.html'">About</li>
+            </div>
+            <div class="menu" id="menu-expand">
+                <li class="magical btn skin" id="menu-expand-child"><i class="icon menu-icon"></i></li>
+            </div>
+            <div id="menu-panel">
+                <div class="menu-panel-content">
+                    <li class="magical btn" onclick="window.location.href='./index.html'">Home</li>
+                    <li class="magical btn" onclick="window.location.href='./work.html'">Work</li>
+                    <li class="magical btn" onclick="window.location.href='./blog.html'">Blog</li>
+                    <li class="magical btn nav" onclick="window.location.href='./about.html'">About</li>
+                </div>
+            </div>
+        </div>
+        <blockquote><img src="./assets/public/logo.svg"></blockquote>
+    </div>
+    <div class="about">
+        <div class="about-top">
+            <div class="about-name">邹倩(Sissi Zou)</div>
+            <div class="about-info">
+                <div class="about-info-left">
+                    <div class="about-info-title">Introduce</div>
+                    <div class="introduce-desc">
+                        我目前是UX/UI设计师，同时也是初级开发者，我希望成为一名设计工程师。在金融、政府职能业务系统、电子商务、自媒体等多个领域都有实际设计经验。核心能力:B端/SaaS全链路设计、数据可视化、品牌VI落地、AIGC辅助、跨职能协作。
+
+<br><br>
+我对技术的无限可能充满激情，同时专注于探索产品设计的价值，力求在设计和交互、技术包容性以及业务理解之间找到平衡点，以解决问题。<br><br>
+我还获得了艺术类相关奖项，入围美术协会的多次展览资格。
+                    </div>
+                </div>
+                <div class="about-info-right">
+                    <div class="contact">
+                        <div class="about-info-title">Contact</div>
+                        <div class="contact-desc">
+                            <div class="list">
+                                <div class="list-label">Email：</div>
+                                <div href="javascript:" class="list-value" id="email" tabindex="0" role="button"  title="点击复制邮箱">
+                                    <a id="emailCopied">zq5637cj18@163.com</a>
+                                </div>
+                                <span class="list-value copied">copied&nbsp;✓</span>
+                            </div>
+                            <div class="list">
+                                <div class="list-label">Wechat：</div>
+                                <div class="list-value">
+                                    <a class="tooltip">sissi5637
+                                        <div class="tooltip-box">
+                                            <img src="./assets/about/wechat.png">
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="resume">
+                        <div class="about-info-title resume-title">Resume</div>
+                        <div class="resume-desc">
+                            <div class="resume-desc-helptext">Download my resume (PDF & 1MB)</div>
+                            <div class="magical resume-btn"><a href="https://sissizou.github.io/" target="_blank">Download</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="about-middle">
+            <div class="power">
+                <div class="list-00">
+                    <div class="magical power-card-number">
+                        <a>
+                            <div class="card-title">5</div>
+                            <div class="card-text">Work</div>
+                        </a>
+                    </div>
+                    <div class="magical power-card-number">
+                        <a>
+                            <div class="card-title">10⁺</div>
+                            <div class="card-text">Project</div>
+                        </a>
+                    </div>
+                    <div class="magical power-card-number">
+                        <a>
+                            <div class="card-title">20⁺</div>
+                            <div class="card-text">Article</div>
+                        </a>
+                    </div>
+                    <div class="magical power-card-number">
+                        <a>
+                            <div class="card-title">2</div>
+                            <div class="card-text">Awards</div>
+                        </a>
+                    </div>
+                </div>
+                <div class="list-01">
+                    <div class="magical power-card">
+                        <a>
+                            <div class="card-img" style="background-image: url('./assets/about/abstract.svg')"></div>
+                            <div class="card-text">UX/UI</div>
+                        </a>
+                    </div>
+                    <div class="magical power-card">
+                        <a>
+                            <div class="card-img" style="background-image: url('./assets/about/menu.svg')"></div>
+                            <div class="card-text">C4D/Blender</div>
+                        </a>
+                    </div>
+                    <div class="magical power-card">
+                        <a>
+                            <div class="card-img" style="background-image: url('./assets/about/code.svg')"></div>
+                            <div class="card-text">Html+CSS</div>
+                        </a>
+                    </div>
+                    <div class="magical power-card">
+                        <a>
+                            <div class="card-img" style="background-image: url('./assets/about/pin.svg')"></div>
+                            <div class="card-text">Vedio</div>
+                        </a>
+                    </div>
+                    <div class="magical power-card">
+                        <a>
+                            <div class="card-img" style="background-image: url('./assets/about/pen.svg')"></div>
+                            <div class="card-text">Illustrator</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="about-bottom">
+            <div class="experience">
+                <div class="item">
+                    <div class="time">❖ 2022.05 ~ Now</div>
+                    <div class="name">
+                        <div class="company">云帆科技</div>
+                        <div class="job">UX/UI Designer</div>
+                    </div>
+                    <div class="project-experience">
+                        <div class="item">
+                            <div class="title">气象监测一体化平台</div>
+                            <div class="desc">
+                                <ul>
+                                    <li>气象监管平台优化升级，提高数据采集效率、合理优化业务操作逻辑、优化视觉体验。其中包括雷电灾害防御综合数据大屏的全新设计。</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="title">智能指挥&智能接触警</div>
+                            <div class="desc">
+                                <ul>
+                                    <li>负责消防总队十三个业务网站、APP、两个可视化大屏（智能接触警、智能指挥）UI设计。
+                                        数字化预案、熟悉演练、桌面推演、训练档案等。
+                                        制作软件演示视频demo</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="title">供热与监管平台</div>
+                            <div class="desc">
+                                <ul>
+                                    <li>政府供热系统监管平台。保障供热情况以可视化形式真实体现、迅速反馈。连续三年更新迭代UI操作界面和优化视觉。始终以直观、美观、操作简洁应对需求变化。</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="time">❖ 2021.05 ~ 2022.04</div>
+                    <div class="name">
+                        <div class="company"><a href="https://www.chinasofti.com/jfh/index.htm" target="_blank">中软国际 ↗</a></div>
+                        <div class="job">UX/UI Designer</div>
+                    </div>
+                    <div class="project-experience">
+                        <div class="item">
+                            <div class="title">DCE数据2.0(大连商品交易所)</div>
+                            <div class="desc">
+                                <ul>
+                                    <li>针对大连商品交易所金融数据业务需求，界面设计总体坚持“外在美，内在优”的原则，让平台得到充分利用；</li>
+                                    <li>国际化设计:采用Figma构建符合国际潮流的设计系统,提升平台海外用户使用率至15%;</li>
+                                    <li>业务赋能:通过用户调研优化详情页布局,关键业务操作时长缩短30%。</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="title">上海证券交易所XX业务平台</div>
+                            <div class="desc">
+                                <ul>
+                                    <li>根据业务流程设计界面交互逻辑，对B端业务列表和表单进行深入研究，提高业务审批效率，色系搭配符合所内调性。</li>
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="title">DCE可视化技术和业务大屏</div>
+                            <div class="desc">
+                                <ul>
+                                    <li>深度调研业务人员和所内领导对大屏的业务需求，有针对性的高效完成大屏的原型设计;</li>
+                                    <li>带领前端团队完成基于永洪BI的报表部分设计和开发。</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="time">❖ 2019.09 ~ 2021.04</div>
+                    <div class="name">
+                        <div class="company">笑阳文化</div>
+                        <div class="job">Product Designer</div>
+                    </div>
+                    <div class="project-experience">
+                        <div class="item">
+                            <div class="title">大连人职业足球俱乐部衍生品</div>
+                            <div class="desc">
+                                <ul>
+                                    <li>品牌与用户体验融合:负责大连人足球俱乐部线上商城设计,优化购物流程,转化率提升18%；</li>
+                                    <li>大连人足球俱乐部文化衍生品设计,对不同产品的设计和打样、制作全流程有深入研究；</li>
+                                    <li>负责百年城公众号运营设计，定期根据商场活动主题设计公众号运营长图以及活动小程序动画设计。</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="copyright">
+            <div>© 2023 Design by Asorn</div>
+            <span>|</span>
+            <div class="fillings">
+                Sissi
+            </div>
+            <span>|</span>
+            <div class="friends">
+                <a href="https://zdo.fun/" target="_blank">ZDO</a>
+            </div>
+        </div>
+    </div>
+    <div class="widget">
+        <div class="shape-light"></div>
+        <div class="shape-star">
+            <div class="rising-stars rising-stars-visible">
+                <div style="height:1px;width:1px"></div>
+                <div style="height:2px;width:2px"></div>
+                <div style="height:1px;width:1px"></div>
+            </div>
+        </div>
+        <div class="shape-earth"></div>
+    </div>
+</body>
+<script src="./js/main.min.js"></script>
+<script src='./js/anime.js'></script>
+<script src='./js/firework.js'></script>
+</html>
