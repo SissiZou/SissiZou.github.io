@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="zh-CN" style="color-scheme: dark;">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作品详情 - Sissi - UX/UI Designer</title>
+    <link rel="stylesheet" href="./css/style.min.css">
+    <link rel="shortcut icon" href="./assets/public/favicon.svg" />
+    <style>
+        .work-detail {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 160px 20px 40px;
+        }
+        
+        .title-tag-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .work-detail .title {
+            font-size: 32px;
+            font-weight: bold;
+            text-align: left;
+            margin-bottom: 0;
+        }
+        
+        /* 使用与work页面完全相同的标签样式 */
+        .work-detail .tag {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            margin-right: 8px;
+            text-align: center;
+            width: fit-content;
+        }
+        
+        .work-detail .tag-web {
+            background-color: #4D7CFE;
+        }
+        
+        .work-detail .tag-app {
+            background-color: #05CD99;
+        }
+        
+        .work-detail .tag-2b {
+            background-color: #FF974A;
+        }
+        
+        .work-detail .tag-assets {
+            background-color: #FF6B72;
+        }
+        
+        .work-detail .tag-other {
+            background-color: #6C5DD3;
+        }
+        
+        .work-detail .tag-container {
+            display: flex;
+            justify-content: flex-start;
+            margin-bottom: 40px;
+        }
+        
+        .work-detail .images {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        
+        .work-detail .image-container {
+            width: 100%;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .work-detail .image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .work-detail .description {
+            margin: 30px 0;
+            line-height: 1.6;
+            font-size: 16px;
+            text-align: left;
+        }
+        
+        .back-button {
+            display: inline-block;
+            margin: 40px auto;
+            padding: 10px 20px;
+            color: #fff;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .back-button:hover {
+            opacity: 0.8;
+        }
+        
+        .back-container {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas class="fireworks"></canvas>
+    <div class="head">
+        <div class="main">
+            <a href="./index.html" class="logo"><img src="./assets/public/logo_text2.svg"></a>
+            <div class="menu">
+                <li class="magical btn" onclick="window.location.href='./index.html'">Home</li>
+                <li class="magical btn nav" onclick="window.location.href='./work.html'">Work</li>
+                <li class="magical btn" onclick="window.location.href='./blog.html'">Blog</li>
+                <li class="magical btn" onclick="window.location.href='./about.html'">About</li>
+            </div>
+            <div class="menu" id="menu-expand">
+                <li class="magical btn skin" id="menu-expand-child"><i class="icon menu-icon"></i></li>
+            </div>
+            <div id="menu-panel">
+                <div class="menu-panel-content">
+                    <li class="magical btn" onclick="window.location.href='./index.html'">Home</li>
+                    <li class="magical btn nav" onclick="window.location.href='./work.html'">Work</li>
+                    <li class="magical btn" onclick="window.location.href='./blog.html'">Blog</li>
+                    <li class="magical btn" onclick="window.location.href='./about.html'">About</li>
+                </div>
+            </div>
+        </div>
+        <blockquote><img src="./assets/public/logo.svg"></blockquote>
+    </div>
+
+    <div class="work-detail">
+        <div class="title-tag-container">
+            <h1 class="title" id="work-title"></h1>
+            <div class="tag" id="work-tag"></div>
+        </div>
+        <!-- <div class="description" id="work-description">
+            作品描述内容将在这里显示
+        </div> -->
+        <div class="images" id="work-images">
+            <!-- 图片将通过JavaScript动态添加 -->
+            <div class="image-container">
+                <img src="./assets/work/dce_01.jpg" alt="作品图片">
+            </div>
+            
+            
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <div class="copyright">
+            <div>© 2023 Design by Asorn</div>
+            <span>|</span>
+            <div class="fillings">
+                Sissi
+            </div>
+            <span>|</span>
+            <div class="friends">
+                <a href="https://zdo.fun/" target="_blank">ZDO</a>
+            </div>
+        </div>
+    </div>
+    <div class="widget">
+        <div class="shape-light"></div>
+        <div class="shape-star">
+            <div class="rising-stars rising-stars-visible">
+                <div style="height:1px;width:1px"></div>
+                <div style="height:2px;width:2px"></div>
+                <div style="height:1px;width:1px"></div>
+            </div>
+        </div>
+        <div class="shape-earth"></div>
+    </div>
+
+    <script>
+        // 获取URL参数
+        function getUrlParams() {
+            const params = {};
+            const queryString = window.location.search.substring(1);
+            const pairs = queryString.split('&');
+            
+            for (let i = 0; i < pairs.length; i++) {
+                const pair = pairs[i].split('=');
+                params[decodeURIComponent(pair[0])] = decodeURIComponent(pair[1] || '');
+            }
+            
+            return params;
+        }
+
+        // 页面加载时获取作品信息
+        window.addEventListener('DOMContentLoaded', () => {
+            const params = getUrlParams();
+            const workId = params.id;
+            const workTitle = params.title || '作品标题';
+            const workTag = params.tag || 'Web';
+            const workDesc = params.desc || '作品描述内容将在这里显示';
+            
+            // 设置页面标题和内容
+            document.title = workTitle + ' - Sissi - UX/UI Designer';
+            document.getElementById('work-title').textContent = workTitle;
+            document.getElementById('work-tag').textContent = workTag;
+            document.getElementById('work-tag').className = 'tag tag-' + (workTag.toLowerCase() === 'web' ? 'web' : 
+                                                                         workTag.toLowerCase() === 'vis screem' ? 'vis screem' : 
+                                                                         workTag.toLowerCase() === 'app' ? 'app' :
+                                                                         workTag.toLowerCase() === 'tob' ? 'tob' :
+                                                                         workTag.toLowerCase() === 'other' ? 'other' :
+                                                                         workTag.toLowerCase() === 'tob' ? '2b' : 'other');
+            document.getElementById('work-description').textContent = workDesc;
+            
+            // 这里可以根据workId加载对应的图片
+            // 实际使用时，可以通过AJAX请求或预定义的数据来加载图片
+        });
+    </script>
+
+    <script>
+        window.addEventListener("mousemove", function (e) {
+            document.querySelectorAll(".magical").forEach(element => {
+                const rect = element.getBoundingClientRect();
+                const offsetX = e.clientX - rect.left;
+                const offsetY = e.clientY - rect.top;
+                element.style.setProperty("--mouse-x", `${offsetX}px`);
+                element.style.setProperty("--mouse-y", `${offsetY}px`);
+            });
+        });
+    </script>
+    <script src="./js/main.min.js"></script>
+    <script src='./js/anime.js'></script>
+    <script src='./js/firework.js'></script>
+</body>
+
+</html>
